@@ -17,8 +17,8 @@ void falaUmaVez(void (*func)(), int pino);
 
 
 void setup() {
-  mySoftwareSerial.begin(9600);
   SoftwareSerial mySoftwareSerial(10, 11);  // RX, TX
+  mySoftwareSerial.begin(9600);
   myDFPlayer.begin(mySoftwareSerial);
   //Definições iniciais
   myDFPlayer.setTimeOut(500);  //  Timeout serial 500ms
@@ -27,9 +27,17 @@ void setup() {
 }
 
 void loop() {
-  falaUmaVez(coloqueOcinto, cinto);
-  falaDeMontao(setaDireitaLigada, setaDireita);
-  falaDeMontao(setaEsquerdaLigada, setaEsquerda);
+  // falaUmaVez(coloqueOcinto, cinto);
+  // falaDeMontao(setaDireitaLigada, setaDireita);
+  // falaDeMontao(setaEsquerdaLigada, setaEsquerda);
 
-  delay(2000);
+  // delay(2000);
+  bloqueio_desliga(8, 9, 13);
 }
+
+
+
+
+
+
+
