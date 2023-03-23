@@ -62,3 +62,11 @@ void chave_liga_desliga(int bt, int led, int i) {
     flag[i] = false;
   }
 }
+
+void executa_agendado(void(*func)(), int tempo, int index){
+	static unsigned long atual[20] ={0};
+	if(millis() - atual[index] > (tempo * 60000)){
+		func();
+		atual[index] = millis();
+		}
+}

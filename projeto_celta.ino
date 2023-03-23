@@ -8,6 +8,7 @@
 #define setaDireita 9
 
 
+
 DFRobotDFPlayerMini myDFPlayer;
 void setaDireitaLigada();
 void setaEsquerdaLigada();
@@ -32,7 +33,8 @@ void loop() {
   // falaDeMontao(setaEsquerdaLigada, setaEsquerda);
 
   // delay(2000);
-  bloqueio_desliga(8, 9, 13);
+ bloqueio_desliga(9, 8, 13);
+ chave_liga_desliga(8, 13, 1);
 }
 
 
